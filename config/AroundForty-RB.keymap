@@ -116,7 +116,7 @@
 &kp LG(A)       &kp LG(X)     &kp LG(C)    &kp LG(V)  &kp LG(F)             &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
 &kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &mkp MB1   &mkp MB2              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
 &kp LEFT_SHIFT  &trans        &trans       &trans     &mkp MB3   &kp LG(R)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SINGLE_QUOTE
-&kp LCTRL       &trans        &trans       &trans     &trans     &trans     &trans                &trans                 &kp BACKSPACE    &kp ENTER      &kp HASH
+&kp LCTRL       &trans        &trans       &trans     &trans     &trans     &trans                &kp COLON              &kp BACKSPACE    &kp ENTER      &kp HASH
             >;
         };
 
@@ -180,10 +180,10 @@
 
         layer_10 {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &msc SCRL_UP    &trans
-&trans      &trans  &trans  &trans  &trans          &trans  &mkp MB5  &mkp MB1  &mkp MCLK       &mkp MB2
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &trans    &msc SCRL_DOWN  &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans
+&kp ESCAPE  &trans  &trans  &trans  &trans          &trans    &trans    &msc SCRL_UP    &trans    &trans
+&trans      &trans  &trans  &trans  &trans          &trans    &mkp MB1  &mkp MCLK       &mkp MB2  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &msc SCRL_DOWN  &trans    &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans    &trans
             >;
         };
     };
