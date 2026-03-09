@@ -86,7 +86,7 @@
 &kp Q             &kp W             &kp E         &kp R     &kp T                          &kp Y        &kp U     &kp I          &kp O    &kp P
 &kp A             &kp S             &kp D         &kp F     &kp G                          &kp H        &kp J     &kp K          &kp L    &kp BACKSPACE
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V     &kp B        &kp LEFT_SHIFT    &kp N        &kp M     &kp COMMA      &kp DOT  &kp ENTER
-&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE  &lt 3 LEFT_ARROW  &lt 2 SPACE  &mac_ime  &kp RIGHT_GUI  &mo 5    &mo 7
+&kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LCMD  &lt 1 SPACE  &lt 3 LEFT_ARROW  &lt 2 SPACE  &mac_ime  &kp RIGHT_GUI  &mo 4    &mo 7
             >;
         };
 
@@ -119,15 +119,6 @@
             >;
         };
 
-        V_Scroll {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         Settings {
             display-name = "Settings";
             bindings = <
@@ -148,12 +139,30 @@
             >;
         };
 
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         layer_10 {
             bindings = <
 &kp ESCAPE  &trans  &trans  &trans  &trans          &trans    &trans    &msc SCRL_UP    &trans    &trans
 &trans      &trans  &trans  &trans  &trans          &trans    &mkp MB1  &mkp MCLK       &mkp MB2  &trans
 &trans      &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &msc SCRL_DOWN  &trans    &trans
 &trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans    &trans
+            >;
+        };
+
+        V_Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
