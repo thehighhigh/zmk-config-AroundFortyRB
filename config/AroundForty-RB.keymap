@@ -93,10 +93,10 @@
         Mac-Fnc {
             display-name = "Mac-Fnc";
             bindings = <
-&kp LG(A)       &kp LG(X)     &kp LG(C)    &kp LG(V)             &kp LG(F)                        &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
-&kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &kp LG(LS(NUMBER_4))  &kp LS(LG(N5))                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
-&kp LEFT_SHIFT  &trans        &trans       &trans                &kp LS(LG(NUMBER_3))  &kp LG(R)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SINGLE_QUOTE
-&kp LCTRL       &trans        &trans       &trans                &trans                &trans     &trans                &kp COLON              &kp BACKSPACE    &kp MINUS      &kp HASH
+&kp LG(A)       &kp LG(X)     &kp LG(C)          &kp LG(V)             &kp LG(F)                        &kp LESS_THAN         &kp GREATER_THAN       &kp CARET        &kp PERCENT    &kp DOLLAR
+&kp TAB         &kp LEFT_GUI  &kp LS(TAB)        &kp LG(LS(NUMBER_4))  &kp LS(LG(N5))                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN      &kp AMPERSAND  &kp DOUBLE_QUOTES
+&kp LEFT_SHIFT  &trans        &kp LG(LS(LC(A)))  &kp LG(LC(LS(Z)))     &kp LS(LG(NUMBER_3))  &kp LG(R)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp QUESTION   &kp SINGLE_QUOTE
+&kp LCTRL       &trans        &trans             &trans                &trans                &trans     &trans                &kp COLON              &kp BACKSPACE    &kp MINUS      &kp HASH
             >;
         };
 
