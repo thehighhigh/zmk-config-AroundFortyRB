@@ -6,3 +6,5 @@ modules/
 *.uf2
 *.bin
 *.hex
+
+repomix-output.xml
