@@ -151,10 +151,10 @@
 
         layer_10 {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans          &trans    &trans    &msc SCRL_UP    &trans    &trans
-&trans      &trans  &trans  &trans  &trans          &trans    &mkp MB1  &mkp MCLK       &mkp MB2  &mo 8
-&trans      &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &msc SCRL_DOWN  &trans    &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans    &trans
+&kp ESCAPE  &trans  &trans  &trans  &trans          &kp LG(C)  &kp LG(V)  &msc SCRL_UP    &trans    &trans
+&trans      &trans  &trans  &trans  &trans          &trans     &mkp MB1   &mkp MCLK       &mkp MB2  &mo 8
+&trans      &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &trans    &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans          &trans    &trans
             >;
         };
 
