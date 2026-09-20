@@ -39,10 +39,20 @@
                            /* AMLを有効にしたい場合は下のコメントを外してください */
                            // <&zip_temp_layer 5 300>;
 
+        /* レイヤー7と8が同時に有効な場合はスクロールを優先する。 */
         scroll-layer {
             layers = <8>;
-            input-processors = <&zip_xy_to_scroll_mapper>,
+            /* CPIを倍にした分を補正し、従来のスクロール速度を保つ。 */
+            input-processors = <&zip_xy_scaler 1 2>,
+                               <&zip_xy_to_scroll_mapper>,
                                <&zip_scroll_scaler 1 45>;
+        };
+
+        precision-layer {
+            layers = <7>;
+            /* 通常800 CPIの半分：従来の400 CPI相当の移動量。 */
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+                               <&zip_xy_scaler 1 2>;
         };
     };
 };
@@ -84,7 +94,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        cpi = <400>;
+        cpi = <800>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         force-awake;
     };
