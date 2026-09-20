@@ -9,15 +9,20 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
+    # ZMK main を SHA で pin（Zephyr 4.1 / 将来の v0.4.0 タグ相当）
+    # v0.4.0 がリリースされたら revision: v0.4.0 に差し替えるだけでよい
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: 6e2ef41e022d555b10f116e395832913f71717b3
       import: app/west.yml
+    # badjeff/main の pin。zmk-0.4 ブランチは pmw3610_devs[] の compat
+    # リネーム漏れ（a1a0f35 で修正）が残っているため main 系列を使う
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: zmk-0.3
+      revision: 44b4a76b74d293a93cec4ccb7e04cb8d29c10f93
+    # caksoylar/main の pin（rgbled_adapter が xiao_ble_zmk.overlay に対応済み）
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3-branch
+      revision: e6b467792a1dabef8cfa5c9fd26bfefc9c16662b
   self:
     path: config

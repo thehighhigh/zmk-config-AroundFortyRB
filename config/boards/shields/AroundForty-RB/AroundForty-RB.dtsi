@@ -77,7 +77,14 @@ aroundforty_rb_physical_layout: aroundforty_rb_physical_layout {
                 = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
                 , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
                 , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
-                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 			
+                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 ;
     };
+};
+
+/* NFC ピン（P0.09 / P0.10）を GPIO として再利用する
+ * 左：kscan の col-gpios、右：kscan col-gpios と SPI CS で使用している
+ * Zephyr 4.1 で CONFIG_NFCT_PINS_AS_GPIOS は削除され、devicetree 指定に変更された */
+&uicr {
+    nfct-pins-as-gpios;
 };
