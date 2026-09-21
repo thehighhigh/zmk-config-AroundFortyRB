@@ -122,7 +122,7 @@
         Settings {
             display-name = "Settings";
             bindings = <
-&trans  &trans  &trans  &trans  &trans         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&to 9  &trans  &trans  &trans  &trans         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans         &studio_unlock  &trans          &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &to 0  &bt BT_CLR      &trans          &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &to 0  &sys_reset      &bt BT_CLR_ALL  &bootloader   &trans        &trans
@@ -149,6 +149,97 @@
         };
 
         V_Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        // Windows mode: layer IDs 9-17 (US host layout).
+        Win-Base {
+            display-name = "Win-Base";
+            bindings = <
+&kp Q             &kp W         &kp E         &kp R             &kp T                 &kp Y         &kp U            &kp I              &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F             &kp G                 &kp H         &kp J            &kp K              &kp L    &kp BACKSPACE
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B   &ime_tog      &kp N         &kp M            &kp COMMA          &kp DOT  &lt 16 ENTER
+&kp TAB           &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 10  &lt 13 SPACE  &lt 12 SPACE  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &mo 14   &mo 16
+            >;
+        };
+
+        Win-Fnc {
+            display-name = "Win-Fnc";
+            bindings = <
+&trans  &kp LC(X)  &kp LC(C)          &kp LC(V)          &kp LC(F)                       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans  &trans     &kp LG(LS(S))      &kp LG(LS(S))      &kp LG(LS(S))                   &trans     &kp GRAVE      &kp LBKT      &kp RBKT              &kp BACKSLASH
+&mo 11  &trans     &kp LG(LS(LC(A)))  &kp LG(LC(LS(Z)))  &kp LG(PRINTSCREEN)  &kp LC(R)  &trans     &kp MINUS      &kp EQUAL     &kp SEMICOLON         &kp SQT
+&trans  &trans     &trans             &trans             &trans               &trans     &kp COMMA  &trans         &trans        &kp PERIOD            &kp SLASH
+            >;
+        };
+
+        Win-Symbols {
+            display-name = "Win-Symbols";
+            bindings = <
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH           &kp DOLLAR         &kp PERCENT                     &kp CARET      &kp AMPERSAND   &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans           &trans       &kp LG(LS(S))      &kp LG(LS(S))      &kp LG(LS(S))                   &trans         &kp TILDE       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE
+&trans           &trans       &kp LG(LS(LC(A)))  &kp LG(LC(LS(Z)))  &kp LG(PRINTSCREEN)  &kp LC(R)  &trans         &kp UNDERSCORE  &kp PLUS        &kp COLON             &kp DOUBLE_QUOTES
+&trans           &trans       &trans             &trans             &trans               &trans     &kp LESS_THAN  &trans          &trans          &kp GREATER_THAN      &kp QUESTION
+            >;
+        };
+
+        Win-Common {
+            display-name = "Win-Common";
+            bindings = <
+&kp ESC  &trans        &kp F11      &kp LG(TAB)             &kp LG(UP_ARROW)                        &kp LC(W)        &kp LA(LEFT_ARROW)  &mkp MB3        &kp LA(RIGHT_ARROW)  &kp HOME
+&kp TAB  &kp LEFT_ALT  &kp LS(TAB)  &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))                 &kp LC(LS(TAB))  &mkp MB1            &kp UP_ARROW    &mkp MB2             &kp PAGE_UP
+&trans   &trans        &trans       &kp LG(D)               &kp LG(DOWN_ARROW)       &kp LG(LS(S))  &kp LC(TAB)      &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
+&trans   &trans        &trans       &trans                  &trans                   &trans         &trans           &kp LC(T)           &trans          &trans               &kp END
+            >;
+        };
+
+        Win-Num {
+            display-name = "Win-Num";
+            bindings = <
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4          &kp NUMBER_5          &kp NUMBER_6      &kp N7          &kp NUMBER_8  &kp N9        &kp NUMBER_0
+&kp F1        &kp F2        &kp F3                &kp F4                &kp F5                &kp F6            &kp F7          &kp F8        &kp F9        &kp F10
+&kp F11       &kp F12       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans  &kp C_PLAY_PAUSE  &kp C_NEXT      &kp C_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP
+&trans        &trans        &trans                &trans                &trans        &trans  &trans            &kp C_PREVIOUS  &trans        &trans        &trans
+            >;
+        };
+
+        Win-Settings {
+            display-name = "Win-Settings";
+            bindings = <
+&to 0   &trans  &trans  &trans  &trans         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans         &studio_unlock  &trans          &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &to 9  &bt BT_CLR      &trans          &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &to 9  &sys_reset      &bt BT_CLR_ALL  &bootloader   &trans        &trans
+            >;
+        };
+
+        Win-AML {
+            display-name = "Win-AML";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+            >;
+        };
+
+        Win-Mouse {
+            display-name = "Win-Mouse";
+            bindings = <
+&kp ESCAPE  &trans  &trans  &trans  &trans          &kp LC(C)  &kp LC(V)  &msc SCRL_UP    &trans    &trans
+&trans      &trans  &trans  &trans  &trans          &trans     &mkp MB1   &mkp MCLK       &mkp MB2  &mo 17
+&trans      &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &trans    &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans          &trans    &trans
+            >;
+        };
+
+        Win-Scroll {
+            display-name = "Win-Scroll";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans

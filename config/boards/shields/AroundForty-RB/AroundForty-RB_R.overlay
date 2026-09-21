@@ -39,9 +39,9 @@
                            /* AMLを有効にしたい場合は下のコメントを外してください */
                            // <&zip_temp_layer 5 300>;
 
-        /* レイヤー7と8が同時に有効な場合はスクロールを優先する。 */
+        /* 精密移動とスクロールが同時に有効な場合はスクロールを優先する。 */
         scroll-layer {
-            layers = <8>;
+            layers = <8 17>; /* Mac / Windows scroll */
             /* CPIを倍にした分を補正し、従来のスクロール速度を保つ。 */
             input-processors = <&zip_xy_scaler 1 2>,
                                <&zip_xy_to_scroll_mapper>,
@@ -49,7 +49,7 @@
         };
 
         precision-layer {
-            layers = <7>;
+            layers = <7 16>; /* Mac / Windows precision */
             /* 通常800 CPIの半分：従来の400 CPI相当の移動量。 */
             input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
                                <&zip_xy_scaler 1 2>;
